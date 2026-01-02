@@ -5,7 +5,7 @@ import TaskList from './components/TaskList'
 import TaskForm from './components/TaskForm'
 import LevelCard from './components/LevelCard'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
+const API_URL = (import.meta.env.VITE_API_URL || 'http://localhost:3001').replace(/\/$/, '')
 
 export default function App() {
   const [tasks, setTasks] = useState([])
